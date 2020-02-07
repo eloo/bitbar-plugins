@@ -18,6 +18,6 @@ FONT=( 'size=12' )
 ICON="iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAQAAAD8fJRsAAAAsUlEQVQYGQXBsS5DYRgA0PPf+5HbWOoBDCYRg85dLJImRqOZyRN08wSdPYPwEAwiMUh0wANImohIGyLcW59zACjg1KuZsQoqtVpgJKWUjkLxB2AXnbRiGNKGoS83FqaWAtyx40lKV9g092tqbJVzqZXSo2c/DjUQ1sBSrY+ik8CeuZTurdvy7tuDM71wbd+BhUsftjUaAwNvAMCx1GqliwoVisCLTgjcAgUFnJj5NNH7B52sOnUySmD9AAAAAElFTkSuQmCC"
 
 last=$(curl -s "https://api.kraken.com/0/public/Ticker?pair=XRPEUR" | tr -d '{}"[]' | tr ':,' '\n' | grep -A1 "^c$" | tail -1)
-printf "%.*f | $FONT image=%s\n" 2 "$last" "$ICON"
+printf "%.*f | $FONT image=%s\n" 3 "$last" "$ICON"
 echo "---"
 
